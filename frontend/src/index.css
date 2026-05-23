@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --primary: #06b6d4;
+  --dark: #0f172a;
+  --card: #1e293b;
+  --text: #ffffff;
+  --gray: #94a3b8;
+}
+
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body{
+  font-family: 'Poppins', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ROOT */
+#root{
+  min-height: 100vh;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-track{
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #06b6d4;
+  border-radius: 20px;
+}
+
+/* GLASS EFFECT */
+.glass{
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* CARD HOVER */
+.card-hover{
+  transition: 0.3s;
+}
+
+.card-hover:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ANIMATION */
+.fade-in{
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade{
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BUTTON */
+.btn-primary{
+  background: linear-gradient(to right,#06b6d4,#3b82f6);
+  padding: 12px 25px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover{
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* INPUT */
+.input{
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 12px;
+  border-radius: 12px;
+  width: 100%;
+  color: white;
+  outline: none;
+}
+
+.input:focus{
+  border-color: #06b6d4;
+}
